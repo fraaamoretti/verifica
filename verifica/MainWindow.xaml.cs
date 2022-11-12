@@ -24,5 +24,47 @@ namespace verifica
         {
             InitializeComponent();
         }
+        Biblioteca malatestiana;
+        bool flag = true;
+        private void btnAddLibro_Click(object sender, RoutedEventArgs e)
+        {
+            if (flag)
+            {
+                MessageBox.Show("COMPILA I CAMPI DI TESTO PER LIBO");
+                flag = false;
+            }
+            else
+            {
+                try
+                {
+                    Libro l = new Libro(txtAutore.Text, txtTitolo.Text, txtEditore.Text, int.Parse(txtAnnoDIPubblicazione.Text), int.Parse(txtNumeroDiPagine.Text)); 
+                    malatestiana.addLibro(l);
+                    lblRis.Content = "true";
+                }
+                catch
+                {
+                     lblRis.Content = "false";
+                }
+            }  
+        }
+        private void btnCercaLibro_Click(object sender, RoutedEventArgs e)
+        {
+            if (flag)
+            {
+                MessageBox.Show("COMPILA IL CAMPO DI TESTO AUTORE PER LIBO");
+                flag = false;
+            }
+            else
+            {
+                try
+                {
+                    lblRis.Content = malatestiana.cercaLibroDIAutore(txtAutore.Text);
+                }
+                catch
+                {
+                    lblRis.Content = "false";
+                }
+            }
+        }
     }
 }

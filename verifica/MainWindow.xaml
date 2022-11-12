@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="btnAddLibro" Content="Aggiungi Libro" HorizontalAlignment="Left" Margin="30,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.635" Height="62" Width="159" Click="btnAddLibro_Click"/>
+        <TextBox x:Name="txtTitolo" HorizontalAlignment="Left" Margin="254,35,0,0" TextWrapping="Wrap" Text="Titolo" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAutore" HorizontalAlignment="Left" Margin="254,53,0,0" TextWrapping="Wrap" Text="Autore" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAnnoDIPubblicazione" HorizontalAlignment="Left" Margin="254,71,0,0" TextWrapping="Wrap" Text="Anno di Pubblicazione(solo anno)" VerticalAlignment="Top" Width="196"/>
+        <TextBox x:Name="txtEditore" HorizontalAlignment="Left" Margin="254,89,0,0" TextWrapping="Wrap" Text="Editore" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="txtNumeroDiPagine" HorizontalAlignment="Left" Margin="254,107,0,0" TextWrapping="Wrap" Text="Numero di Pagine(solo numero)" VerticalAlignment="Top" Width="185"/>
+        <Label x:Name="lblRis" Content="" HorizontalAlignment="Left" Margin="274,231,0,0" VerticalAlignment="Top" Height="166" Width="407" BorderBrush="#FF1350B3" BorderThickness="5,5,5,5"/>
+        <Button x:Name="btnCercaLibro" Content="Cerca Libro per Autore" HorizontalAlignment="Left" Margin="30,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="64" Width="164" Click="btnCercaLibro_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.398"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
     </Grid>
 </Window>
