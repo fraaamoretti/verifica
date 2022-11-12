@@ -24,6 +24,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button x:Name="btnElencoLibriAutore" Content="Elenco Libri per Autore" HorizontalAlignment="Left" Margin="30,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.569" Height="72" Width="159" Click="btnElencoLibriAutore_Click"/>
+        <Button x:Name="btnGetNumLibri" Content="Quanti Libri ci sono?" HorizontalAlignment="Left" Margin="30,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.45,0.598" Height="50" Width="159" Click="btnGetNumLibri_Click"/>
 
     </Grid>
 </Window>

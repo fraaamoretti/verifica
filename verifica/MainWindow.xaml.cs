@@ -66,5 +66,30 @@ namespace verifica
                 }
             }
         }
+
+        private void btnElencoLibriAutore_Click(object sender, RoutedEventArgs e)
+        {
+            if (flag)
+            {
+                MessageBox.Show("COMPILA IL CAMPO DI TESTO AUTORE PER LIBO");
+                flag = false;
+            }
+            else
+            {
+                try
+                {
+                    lblRis.Content = malatestiana.elencoLibriPerAutore(txtAutore.Text);
+                }
+                catch
+                {
+                    lblRis.Content = "false";
+                }
+            }
+        }
+
+        private void btnGetNumLibri_Click(object sender, RoutedEventArgs e)
+        {
+            lblRis.Content = malatestiana.getNumLibri();
+        }
     }
 }
