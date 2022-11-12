@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace verifica
-{
+{ //commento aggiunto nell ultimo punto
     /// <summary>
     /// Logica di interazione per MainWindow.xaml
     /// </summary>
