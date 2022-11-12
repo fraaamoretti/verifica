@@ -10,7 +10,14 @@ namespace verifica
     {
         string autore, titolo, editore;
         int annoDiPubblicazione, numeroDiPagine;
-
+        public Libro(string autore, string titolo, string editore, int annoDiPubblicazione, int numeroDiPagine)
+        {
+            this.autore = autore;
+            this.titolo = titolo;
+            this.editore = editore;
+            this.annoDiPubblicazione = annoDiPubblicazione;
+            this.numeroDiPagine = numeroDiPagine;
+        }
         public string toString()
         {
             string a = "Autore --> " + this.autore + " ";
