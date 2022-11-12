@@ -10,7 +10,6 @@ namespace verifica
     {
         string nome, indirizzo, orarioLavorativo;
         public List<Libro> elencoLibri;
-
         public Biblioteca(string nome, string indirizzo, string orarioLavorativo)
         {
             this.nome = nome;
@@ -18,7 +17,6 @@ namespace verifica
             this.orarioLavorativo = orarioLavorativo;
             elencoLibri = new List<Libro>();
         }
-
         public bool aggiungiLibro(Libro libroDaAggiungere)
         {
             try
@@ -31,17 +29,34 @@ namespace verifica
                 return false;
             }
         }
-
         public string cercaLibro(string titolo)
         {
             foreach(Libro l in elencoLibri)
             {
-                if(l.titolo == titolo)
+                string tit = l.getTitolo();
+                if(tit == titolo)
                 {
                     return l.toString();
                 }
             }
             return "il libro non è presente nell'elenco";
+        }
+        public string cercaLibriDiAutore(string autore)
+        {
+            string elenco = "Elenco libri dell'autore " + autore + ":" + "\n";
+            foreach (Libro l in elencoLibri)
+            {
+                string aut = l.getAutore();
+                if (aut == autore)
+                {
+                    elenco += l.getTitolo() + "\n";
+                }
+            }
+            return elenco;
+        }
+        public int getNumLibri()
+        {
+            return elencoLibri.Count();
         }
     }
 }
